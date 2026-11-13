@@ -104,6 +104,18 @@
     .preview .host { display: block; font-size: .8rem; opacity: .7; margin-top: 2px; }
     .preview:hover, .preview:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 
+    /* two project cards side by side, stacked on narrow screens */
+    .pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .pair .preview { max-width: none; margin: 0; }
+    @media (max-width: 600px) {
+      .pair { grid-template-columns: minmax(0, 1fr); }
+    }
+
     @media (max-width: 520px) {
       h1 { font-size: 1.5rem; margin-top: 40px; }
       #theme { right: 16px; }
@@ -163,8 +175,8 @@
         <li>JavaScript (React.js &amp; Node.js)</li>
         <li>Databases: MySQL, PostgreSQL</li>
       </ul>
-      <p>I can work in any web language.</p>
-      <p>I understand web projects from idea inception to deployment.</p>
+      <p>I can work in any programming language.</p>
+      <p>I understand projects from idea inception to deployment.</p>
     </section>
 
     <section id="experience">
@@ -183,11 +195,12 @@
 
     <section id="projects">
       <h2>Personal Projects</h2>
+      <div class="pair">
       <a class="preview" href="https://ai-slop.infinityfree.me/" target="_blank" rel="noopener">
-        <div class="shot"><img src="previews/ai-slop.png" data-fallback="https://s0.wp.com/mshots/v1/https%3A%2F%2Fai-slop.infinityfree.me%2F?w=800&amp;h=500" alt="Preview of the AI-SLOP website" loading="lazy"></div>
+        <div class="shot"><img src="previews/ai-slop.png" data-fallback="https://s0.wp.com/mshots/v1/https%3A%2F%2Fai-slop.infinityfree.me%2F?w=800&amp;h=500" alt="Preview of the Mawazobase website" loading="lazy"></div>
         <div class="text">
-          <strong>AI-SLOP</strong>
-          <span class="desc">Live website with users.</span>
+          <strong>Mawazobase</strong>
+          <span class="desc">A Kenyan-based chatting app for sharing thoughts.</span>
           <span class="host">ai-slop.infinityfree.me</span>
         </div>
       </a>
@@ -195,10 +208,11 @@
         <div class="shot"><img src="previews/stagedoor.png" data-fallback="https://s0.wp.com/mshots/v1/https%3A%2F%2Fstagedoor.infinityfree.me%2F?w=800&amp;h=500" alt="Preview of the StageDoor website" loading="lazy"></div>
         <div class="text">
           <strong>StageDoor</strong>
-          <span class="desc">Pre-launch.</span>
+          <span class="desc">A live events management platform for artists and event organisers. Pre-launch.</span>
           <span class="host">stagedoor.infinityfree.me</span>
         </div>
       </a>
+      </div>
     </section>
 
     <section id="internships">
